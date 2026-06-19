@@ -1,0 +1,33 @@
+name: sectorscope
+description: "Air traffic control radar simulator: work a busy upper sector, project conflicts on a predictive timeline and issue clearances."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  flutter_inappwebview: ^6.1.5
+  supabase_flutter: ^2.14.2
+  onesignal_flutter: ^5.6.0
+  affise_attribution_lib: ^1.7.8
+  shared_preferences: ^2.5.5
+  flutter_secure_storage: ^10.3.1
+  cryptography: ^2.9.0
+  http: ^1.6.0
+  intl: ^0.20.2
+  uuid: ^4.5.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
