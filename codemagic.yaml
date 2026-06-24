@@ -21,6 +21,11 @@ workflows:
           EOF
       - name: Write dart defines
         script: |
+          SB_URL=$(printf %s "${SB_URL}" | LC_ALL=C tr -cd '[:print:]')
+          SB_ANON=$(printf %s "${SB_ANON}" | LC_ALL=C tr -cd '[:print:]')
+          OS_APP_ID=$(printf %s "${OS_APP_ID}" | LC_ALL=C tr -cd '[:print:]')
+          AFF_APP_ID=$(printf %s "${AFF_APP_ID}" | LC_ALL=C tr -cd '[:print:]')
+          AFF_SECRET=$(printf %s "${AFF_SECRET}" | LC_ALL=C tr -cd '[:print:]')
           cat > "$CM_BUILD_DIR/dart_defines.json" <<EOF
           {
             "SB_URL": "$SB_URL",
@@ -60,6 +65,11 @@ workflows:
     scripts:
       - name: Write dart defines
         script: |
+          SB_URL=$(printf %s "${SB_URL}" | LC_ALL=C tr -cd '[:print:]')
+          SB_ANON=$(printf %s "${SB_ANON}" | LC_ALL=C tr -cd '[:print:]')
+          OS_APP_ID=$(printf %s "${OS_APP_ID}" | LC_ALL=C tr -cd '[:print:]')
+          AFF_APP_ID=$(printf %s "${AFF_APP_ID}" | LC_ALL=C tr -cd '[:print:]')
+          AFF_SECRET=$(printf %s "${AFF_SECRET}" | LC_ALL=C tr -cd '[:print:]')
           cat > "$CM_BUILD_DIR/dart_defines.json" <<EOF
           {
             "SB_URL": "$SB_URL",
@@ -82,7 +92,3 @@ workflows:
             --export-options-plist="$HOME/export_options.plist"
     artifacts:
       - build/ios/ipa/*.ipa
-    publishing:
-      app_store_connect:
-        auth: integration
-        submit_to_testflight: true

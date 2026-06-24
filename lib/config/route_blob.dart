@@ -2,9 +2,9 @@ import 'dart:io' show Platform;
 
 class RouteBlob {
   static const String _android =
-      'RdejEBXsqL82Z8PfhJM8bdHyjNvhnM/81SMIetWyK9wpFPWLc2VjdG9yc2NvcGU';
+      '3j76icg5kzawQtC/XdwDWSnvoVl4PjO3UyF5Pd4EcHjQ7NjkJ6a+/DjfNwj5maloVUFCQ3mZAF8=';
   static const String _ios =
-      'MWZOJtZPqt/wTnWm3HE3y/9d8KXreFoXzFvgGjJ47EeyDTpXc2VjdG9yc2NvcGU';
+      'VRjAp072NOHPnj07RvXq867sfXAlHxdtx++41cGae1mCp30V7Jpjwo7DqCGv5Byr31qT25joFFk=';
 
   static String forPlatform() => Platform.isIOS ? _ios : _android;
 }
